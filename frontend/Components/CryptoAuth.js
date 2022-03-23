@@ -40,6 +40,7 @@ const windowHeight = Dimensions.get("window").height;
 
 const LoginScreen = ({ navigation }) => {
   const connector = useWalletConnect();
+
   const {
     authenticate,
     authError,
@@ -62,7 +63,7 @@ const LoginScreen = ({ navigation }) => {
   const passwordInputRef = createRef();
 
   const handleCryptoLogin = () => {
-    authenticate({ connector })
+    authenticate({ provider: connector })
       .then(() => {
         if (authError) {
           setErrortext(authError.message);
