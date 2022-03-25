@@ -27,6 +27,9 @@ interface ProvidersProps {
 const appId = REACT_APP_MORALIS_APPLICATION_ID;
 const serverUrl = REACT_APP_MORALIS_SERVER_URL;
 const environment = 'native';
+console.log('appId :>> ', appId);
+console.log('serverUrl :>> ', serverUrl);
+
 // Initialize Moralis with AsyncStorage to support react-native storage
 Moralis.setAsyncStorage(AsyncStorage);
 // Replace the enable function to use the react-native WalletConnect
